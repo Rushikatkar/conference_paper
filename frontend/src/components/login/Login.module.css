@@ -1,0 +1,126 @@
+.form {
+    background-color: white;
+    padding: 3.125em;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    /* Change to row to display side by side */
+    align-items: center;
+    /* Center vertically */
+    justify-content: space-between;
+    /* Add space between left and right components */
+    box-shadow: 5px 5px 15px -1px rgba(0, 0, 0, 0.75);
+    width: 350px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 50px;
+}
+
+.signup {
+    color: rgb(77, 75, 75);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: block;
+    font-weight: bold;
+    font-size: x-large;
+    margin-bottom: 0.5em;
+    text-align: center;
+}
+
+.forminput {
+    width: 100%;
+    margin-bottom: 1.25em;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    padding: 0.8em;
+    font-family: 'Inter', sans-serif;
+    outline: none;
+}
+
+.forminput:focus {
+    border: 1px solid #639;
+    outline: none;
+}
+
+.formmarketing {
+    display: flex;
+    margin-bottom: 1.25em;
+    align-items: center;
+}
+
+.formmarketing>input {
+    margin-right: 0.625em;
+}
+
+.formmarketing>label {
+    color: grey;
+}
+
+.formsubmit {
+    width: 100%;
+    padding: 0.625em;
+    border-radius: 5px;
+    color: white;
+    background-color: #639;
+    border: 1px dashed #639;
+    cursor: pointer;
+}
+
+.signin {
+    color: rgba(88, 87, 87, 0.822);
+    font-size: 14px;
+}
+
+.signin {
+    text-align: center;
+}
+
+.signin a {
+    color: royalblue;
+}
+
+.signin a:hover {
+    text-decoration: underline royalblue;
+}
+
+.inputblock {
+    position: relative;
+}
+
+.forgot {
+    display: block;
+    margin: 0px 0 10px 0;
+    color: #5e7eb6;
+    font-size: 0.9em;
+}
+
+.formsubmit:hover {
+    color: #639;
+    background-color: white;
+    border: 1px dashed #639;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+
+.leftcomp {
+    flex: 1;
+    /* Use flex property to divide space equally */
+    padding-right: 1em;
+    /* Add some spacing between left and right components */
+    width: 50%;
+    /* Add some spacing between left and right components */
+}
+
+.rightcomp {
+    flex: 1;
+    /* Use flex property to divide space equally */
+
+}
+
+.rightcomp img {
+    width: 100%;
+    height: 100px;
+    /* Make sure the image doesn't exceed the width of its container */
+}
