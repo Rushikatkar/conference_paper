@@ -30,10 +30,27 @@ export default function Upload() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+
+        // Validation for contact_number (must be 10 digits)
+        const contactNumberRegex = /^\d{10}$/;
+        if (!contactNumberRegex.test(formData.contact_number)) {
+            setNotificationMessage('Please enter a valid 10-digit contact number.');
+            return;
+        }
+
+        // Validation for email (basic email format check)
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(formData.email)) {
+            setNotificationMessage('Please enter a valid email address.');
+            return;
+        }
+
         if (!formData.word_file) {
             setNotificationMessage('Please upload a Word file.'); // Show notification if no file is selected
             return; // Prevent form submission if no file is selected
         }
+
+        // Form data is valid, proceed with form submission
         const formDataToSend = new FormData();
         formDataToSend.append('full_name', formData.full_name);
         formDataToSend.append('email', formData.email);
@@ -66,7 +83,6 @@ export default function Upload() {
             console.error('Error:', error);
         }
     };
-
 
     return (
         <div className="max-w-md mx-auto mt-8 p-6 bg-white rounded-md shadow-md">
@@ -152,7 +168,7 @@ export default function Upload() {
                     Upload
                 </button>
             </form>
-            {notificationMessage && <Notification message={notificationMessage} />}
+            {notificationMessage && <Notification message={notificationMessage} bgColor="#6EE7B7" textColor="#333" />}
         </div>
     );
 }
